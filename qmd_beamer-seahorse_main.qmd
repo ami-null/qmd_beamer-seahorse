@@ -1,0 +1,53 @@
+---
+# title: ""
+# not providing title here in order to turn off the default title page
+# because, I want the titlepage to be "plain" (no frame number in footer)
+
+# author: ""
+# not providing author here because I want to provide a short author name as well
+
+# date: ""
+
+# TITLE, AUTHOR AND DATE SHOULD BE PUT INTO metainfo.tex
+format: 
+    beamer:
+        keep-tex: false
+        cite-method: natbib
+        include-in-header:
+            - file: qmd_beamer-seahorse_metainfo.tex    # for title, author, date etc
+            - file: qmd_beamer-seahorse_header.tex    # main configs
+        include-after-body:
+            - file: qmd_beamer-seahorse_after-body.tex    # for "thank you" page and bibliography
+
+aspectratio: 169
+fontsize: 11pt
+# colortheme: metropolis
+fonttheme: professionalfonts
+linkcolor: black
+citecolor: airforceblue!110    # this color is defined in the header file
+
+biblio-style: apalike
+# bibliography: refdb.bib    # citation printed using include_bib.tex file
+---
+
+## {.plain}
+\titlepage
+
+## Outline {.plain}
+\tableofcontents
+
+# Introduction
+
+## Intro slide 1
+See: \citet{R-base}.
+
+## Intro slide 2
+
+1. A
+2. B
+
+# Section 2
+
+## Slide 3
+
+## Slide 4

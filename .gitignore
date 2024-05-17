@@ -1,0 +1,10 @@
+*
+!.gitignore
+!LICENSE
+!qmd_beamer-seahorse_after-body.tex
+!qmd_beamer-seahorse_header.tex
+!qmd_beamer-seahorse_main.pdf
+!qmd_beamer-seahorse_main.qmd
+!qmd_beamer-seahorse_metainfo.tex
+!README.md
+!refdb.bib

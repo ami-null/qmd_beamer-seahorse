@@ -1,0 +1,86 @@
+\newcommand\Wider[2][4em]{%
+	\makebox[\linewidth][c]{%
+		\begin{minipage}{\dimexpr\textwidth+#1\relax}
+			% \raggedright#2
+			\centering#2
+		\end{minipage}%
+	}%
+}
+
+\addtocounter{framenumber}{-2}
+
+\usepackage{appendixnumberbeamer}
+\usepackage[font=scriptsize]{caption}
+\usepackage{booktabs, longtable, colortbl, array}
+\usepackage[]{natbib}
+
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+\let\oldcite=\cite
+\renewcommand{\cite}[1]{\textcolor{airforceblue!110}{\oldcite{#1}}}
+\let\oldcitet=\citet
+\renewcommand{\citet}[1]{\textcolor{airforceblue!110}{\oldcitet{#1}}}
+\let\oldcitep=\citep
+\renewcommand{\citep}[1]{\textcolor{airforceblue!110}{\oldcitep{#1}}}
+
+% \usefonttheme{professionalfonts}
+\usecolortheme{seahorse}
+\useinnertheme[shadow]{rounded}
+\useoutertheme{shadow}
+
+\setbeamertemplate{headline}{}
+
+\definecolor{ttc}{RGB}{202, 202, 235}
+\setbeamercolor{block title}{bg=ttc, fg = black}
+\setbeamercolor{block body}{bg=ttc!40, fg = black}
+
+\setbeamercolor{caption name}{fg=normal text.fg}
+\setbeamercolor{page number in head/foot}{fg=gray}
+
+\setbeamercolor{page number in head/foot}{fg=gray}
+% \setbeamertemplate{page number in head/foot}[appendixframenumber]
+\setbeamertemplate{footline}[frame number]
+
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{enumerate items}[circle]
+\setbeamertemplate{sections/subsections in toc}[circle]
+
+\setbeamertemplate{frametitle continuation}[from second][(cont.)]
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercovered{transparent}
+
+
+\setbeamertemplate{section page}{
+    \begin{centering}
+    	\begin{beamercolorbox}[sep=12pt,center,shadow=true,rounded=true]{section title}
+    		\usebeamerfont{section title}\insertsection\par%
+    	\end{beamercolorbox}
+    \end{centering}
+}
+
+\AtBeginSection{
+	{
+		\addtocounter{framenumber}{-1}
+		\setbeamertemplate{footline}{}
+		\begin{frame}
+			\sectionpage
+		\end{frame}
+	}
+}
+
+% \AtBeginSection{
+	% \ifbibliography
+	
+	% \else
+		% {
+			% \begin{frame}[noframenumbering, plain]
+				% \sectionpage
+			% \end{frame}
+		% }
+	% \fi
+% }
+
+
+\AtBeginPart{
+  % \frame{\partpage}
+}

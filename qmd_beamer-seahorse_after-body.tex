@@ -1,0 +1,24 @@
+% \begin{frame}[plain, noframenumbering]{}
+    % \centering \Huge Thank you.
+% \end{frame}
+
+\section*{Thank you.}
+
+\appendix
+
+% \begin{frame}[allowframebreaks]{References}
+    % \bibliographytrue
+    % \def\bibfont{\footnotesize}
+    % \bibliography{refdb.bib}
+% \end{frame}
+
+\begingroup
+    \renewcommand{\section}[2]{}%
+    \begin{frame}[allowframebreaks]{References}
+		\bibliographytrue
+        \def\bibfont{\footnotesize}
+		\Wider{
+			\bibliography{refdb.bib}
+		}
+    \end{frame}
+\endgroup
