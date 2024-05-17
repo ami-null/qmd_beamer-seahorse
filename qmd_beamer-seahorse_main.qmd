@@ -20,8 +20,7 @@ format:
             - file: qmd_beamer-seahorse_after-body.tex    # for "thank you" page and bibliography
 
 aspectratio: 169
-fontsize: 11pt
-# colortheme: metropolis
+fontsize: 12pt
 fonttheme: professionalfonts
 linkcolor: black
 citecolor: airforceblue!110    # this color is defined in the header file
