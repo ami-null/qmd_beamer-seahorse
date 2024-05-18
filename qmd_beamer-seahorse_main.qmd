@@ -28,6 +28,12 @@ citecolor: airforceblue!110    # this color is defined in the header file
 biblio-style: apalike
 # bibliography: refdb.bib    # citation printed manually
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_knit$set(progress = TRUE, verbose = TRUE)
+```
+
 ## {.plain}
 \titlepage
 
