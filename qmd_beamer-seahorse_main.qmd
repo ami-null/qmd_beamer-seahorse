@@ -15,7 +15,7 @@ format:
         cite-method: natbib
         include-in-header:
             - file: qmd_beamer-seahorse_metainfo.tex    # for title, author, date etc
-            - file: qmd_beamer-seahorse_header.tex    # main configs
+            - file: qmd_beamer-seahorse_header.tex    # main configs and packages
         # include-after-body:
         #     - file: qmd_beamer-seahorse_after-body.tex
 
@@ -26,7 +26,7 @@ linkcolor: black
 citecolor: airforceblue!110    # this color is defined in the header file
 
 biblio-style: apalike
-# bibliography: refdb.bib    # citation printed using after-body.tex file
+# bibliography: refdb.bib    # citation printed manually
 ---
 ## {.plain}
 \titlepage
