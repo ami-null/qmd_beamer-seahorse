@@ -36,10 +36,10 @@ biblio-style: apalike
 
 # Sec 1
 
-## Intro slide 1
+## Slide 1
 See: \citet{R-base}.
 
-## Intro slide 2
+## Slide 2
 1. A
 2. B
 
@@ -72,9 +72,13 @@ c
 
 ::: {whatever}
 ## {.plain}
+```{=latex}
 \addtocounter{framenumber}{-1}
 \centering \Huge Thank you.
+```
 :::
+
+```{=latex}
 \appendix
 
 \begingroup
@@ -85,9 +89,10 @@ c
 		\bibliography{refdb.bib}
     \end{frame}
 \endgroup
+```
 
 ## Appendix slide 1
-X
+x
 
 ## Appendix slide 2
-Y
+y
