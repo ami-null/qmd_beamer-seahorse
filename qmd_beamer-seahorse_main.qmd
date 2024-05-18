@@ -50,9 +50,10 @@ See: \citet{R-base}.
 ## Slide 3
 ::: {.block}
 ### Block title
+\vspace{-0.5em}
+<!-- this negative vspace is required because quarto adds a phantomsection which adds a bit of unwanted space -->
 Block text
 :::
-
 Text outside block.
 
 ## Slide 4
