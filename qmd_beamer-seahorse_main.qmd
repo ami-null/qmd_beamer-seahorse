@@ -26,7 +26,7 @@ linkcolor: black
 citecolor: airforceblue!110    # this color is defined in the header file
 
 biblio-style: apalike
-# bibliography: refdb.bib    # citation printed using include_bib.tex file
+# bibliography: refdb.bib    # citation printed using after-body.tex file
 ---
 
 ## {.plain}
@@ -48,5 +48,11 @@ See: \citet{R-base}.
 # Section 2
 
 ## Slide 3
+::: {.block}
+### Block title
+Block text
+:::
+
+Text outside block.
 
 ## Slide 4
