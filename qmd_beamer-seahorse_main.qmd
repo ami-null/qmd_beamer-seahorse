@@ -16,8 +16,8 @@ format:
         include-in-header:
             - file: qmd_beamer-seahorse_metainfo.tex    # for title, author, date etc
             - file: qmd_beamer-seahorse_header.tex    # main configs
-        include-after-body:
-            - file: qmd_beamer-seahorse_after-body.tex    # for "thank you" page and bibliography
+        # include-after-body:
+        #     - file: qmd_beamer-seahorse_after-body.tex
 
 aspectratio: 169
 fontsize: 12pt
@@ -28,27 +28,25 @@ citecolor: airforceblue!110    # this color is defined in the header file
 biblio-style: apalike
 # bibliography: refdb.bib    # citation printed using after-body.tex file
 ---
-
 ## {.plain}
 \titlepage
 
 ## Outline {.plain}
 \tableofcontents
 
-# Introduction
+# Sec 1
 
 ## Intro slide 1
 See: \citet{R-base}.
 
 ## Intro slide 2
-
 1. A
 2. B
 
-# Section 2
+# Sec 2
 
 ## Slide 3
-::: {.block}
+::: {what-i-write-here-does-not-seem-to-matter-as-long-as-something-is-written}
 ### Block title
 \vspace{-0.5em}
 <!-- this negative vspace is required because quarto adds a phantomsection which adds a bit of unwanted space -->
@@ -57,3 +55,39 @@ Block text
 Text outside block.
 
 ## Slide 4
+a
+
+::: {whatever}
+## Slide 5
+b
+:::
+
+<!-- in order to put latex commands between to two frames, put previous frame in divs like above -->
+
+\section{Sec 3}
+
+## Slide 6
+c
+
+
+::: {whatever}
+## {.plain}
+\addtocounter{framenumber}{-1}
+\centering \Huge Thank you.
+:::
+\appendix
+
+\begingroup
+    \renewcommand{\section}[2]{}
+    \begin{frame}[allowframebreaks]{References}
+		%\bibliographytrue
+        \def\bibfont{\footnotesize}
+		\bibliography{refdb.bib}
+    \end{frame}
+\endgroup
+
+## Appendix slide 1
+X
+
+## Appendix slide 2
+Y

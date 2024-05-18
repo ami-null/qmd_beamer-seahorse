@@ -1,12 +1,3 @@
-\newcommand\Wider[2][4em]{%
-	\makebox[\linewidth][c]{%
-		\begin{minipage}{\dimexpr\textwidth+#1\relax}
-			% \raggedright#2
-			\centering#2
-		\end{minipage}%
-	}%
-}
-
 \addtocounter{framenumber}{-2}
 
 \usepackage{appendixnumberbeamer}
@@ -83,4 +74,13 @@
 
 \AtBeginPart{
   % \frame{\partpage}
+}
+
+\newcommand\Wider[2][4em]{%
+	\makebox[\linewidth][c]{%
+		\begin{minipage}{\dimexpr\textwidth+#1\relax}
+			% \raggedright#2
+			\centering#2
+		\end{minipage}%
+	}%
 }
