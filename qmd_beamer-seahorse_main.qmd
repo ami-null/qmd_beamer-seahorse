@@ -18,6 +18,7 @@ format:
             - file: qmd_beamer-seahorse_header.tex    # main configs and packages
         # include-after-body:
         #     - file: qmd_beamer-seahorse_after-body.tex
+        latex-auto-install: false    # do not try to update/install texlive packages on compilation errors
 
 aspectratio: 169
 fontsize: 12pt
